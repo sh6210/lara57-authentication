@@ -11,29 +11,15 @@
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
-                        {{--<div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="emailOrUsername" type="text" class="form-control{{ $errors->has('emailOrUsername') ? ' is-invalid' : '' }}" name="emailOrUsername" value="{{ old('emailOrUsername') }}" required autofocus>
-
-                                @if ($errors->has('emailOrUsername'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('emailOrUsername') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>--}}
-
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Username') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Email or Username') }}</label>
 
                             <div class="col-md-6">
-                                <input id="username" type="text" class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" name="username" value="{{ old('username') }}" required autofocus>
+                                <input id="email" type="text" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
 
-                                @if ($errors->has('username'))
+                                @if ($errors->has('email'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('username') }}</strong>
+                                        <strong>{{ $errors->first('email') }}</strong>
                                     </span>
                                 @endif
                             </div>
